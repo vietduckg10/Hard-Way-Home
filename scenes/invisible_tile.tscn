@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://jdoauq11xe5v"]
+
+[ext_resource type="Texture2D" uid="uid://c7apudd78tg10" path="res://assets/grass_tile.png" id="1_efhhp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sy317"]
+size = Vector2(16, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mvsju"]
+size = Vector2(14, 2)
+
+[node name="InvisibleTile" type="InvisibleTile" unique_id=1246821192]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=615301247]
+visible = false
+texture = ExtResource("1_efhhp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1072118430]
+shape = SubResource("RectangleShape2D_sy317")
+disabled = true
+
+[node name="TriggerArea" type="Area2D" parent="." unique_id=1958894765]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TriggerArea" unique_id=1748434042]
+position = Vector2(0, 9)
+shape = SubResource("RectangleShape2D_mvsju")
+one_way_collision_direction = Vector2(0, -1)

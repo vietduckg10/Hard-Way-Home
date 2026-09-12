@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://j1u6esn40rt0"]
+
+[node name="Node2D" type="Node2D" unique_id=784109080]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=819697924]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer" unique_id=402247240]
+custom_maximum_size = Vector2(150, 50)
+offset_left = 599.0
+offset_top = 265.0
+offset_right = 639.0
+offset_bottom = 305.0
+
+[node name="Label" type="Label" parent="CanvasLayer/HBoxContainer" unique_id=1802781095]
+layout_mode = 2
+text = "Test"

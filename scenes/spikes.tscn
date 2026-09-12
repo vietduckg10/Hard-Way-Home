@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://b414grksjyck7"]
+
+[ext_resource type="Texture2D" uid="uid://ok2x7sfu8jnq" path="res://assets/spikes.png" id="1_s0g1x"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sy317"]
+size = Vector2(12, 7)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mvsju"]
+size = Vector2(16, 8)
+
+[node name="Spikes" type="Spikes" unique_id=248459501]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=432547540]
+visible = false
+texture = ExtResource("1_s0g1x")
+
+[node name="KillZone" type="KillZone" parent="." unique_id=1455671630]
+monitoring = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KillZone" unique_id=1729756065]
+position = Vector2(0, 4.5)
+shape = SubResource("RectangleShape2D_sy317")
+
+[node name="Timer" type="Timer" parent="KillZone" unique_id=2133234561]
+wait_time = 3.0
+
+[node name="TriggerZone" type="Area2D" parent="." unique_id=390589055]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TriggerZone" unique_id=385885864]
+position = Vector2(0, 4)
+shape = SubResource("RectangleShape2D_mvsju")
